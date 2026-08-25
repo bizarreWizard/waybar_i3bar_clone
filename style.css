@@ -1,0 +1,92 @@
+/*
+
+It is generally better to configure device-specific settings,
+such as font family and font size,
+in a separate "specific.css" file, which allows the configuration
+to be portable between different machines with minimal effort.
+Following is an example of device-specific configuration:
+
+* {
+    font-family: "Iosevka Fixed Extended";
+    font-size: 16px;
+}
+
+The "specific.css" file must be placed inside of this directory
+to be detected. The following line can be edited 
+to change the path (or name) of the file.
+
+*/
+@import url("specific.css");
+
+* {
+    border: none;
+}
+
+.modules-right {
+    padding-right: 10px;
+}
+
+.modules-left {
+    padding-left: 2px;
+}
+
+window#waybar {
+    background: black;
+    border-bottom: 0px transparent;
+    color: white;
+}
+
+#window {
+    color: lime;
+}
+
+tooltip {
+  background: rgba(0, 0, 0, 1);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    margin: 2 2px;
+    background: rgba(34, 34, 34, 1);
+    color: gray;
+    border: 1px solid rgba(44, 44, 44, 1);
+    border-radius: 0;
+}
+
+#workspaces button.active {
+    color: white;
+    background: rgba(40, 85, 119, 1);
+    border: 1px solid rgba(62, 106, 139, 1);
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#memory {color: lime;}
+#memory.warning {color: yellow;}
+#memory.critical {color: red;}
+
+#battery {color: lime;}
+#battery.warning {color: yellow;}
+#battery.critical {color: red;}
+#battery.charging {color: cyan;}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#network {color: lime}
+#network.disconnected {color: red}
+
+#cpu {color: lime}
+#cpu.warning {color: yellow}
+#cpu.critical {color: red}
